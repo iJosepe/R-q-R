@@ -9,7 +9,4 @@ DNI <- function(numero) {
     letras <- letras[numero %% 23 + 1]
     return(letras)
 }
-DNI(27474002)
-DNI(12742560)
-DNI(49338204)
-DNI(49338206)
+DNI(10000000)
