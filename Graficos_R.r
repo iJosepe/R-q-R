@@ -75,8 +75,27 @@ dev.off()
 graphics.off()
 while (dev.cur() > 1) dev.off() # Equivalente
 
-3 Tipos de plot en R
+# 3 Tipos de plot en R
+j <- 1:20
+k <- j
+par(mfrow = c(1, 3))
+plot(j, k, type ="l", main = "type = 'l'")
+plot(j, k, type ="s", main = "type = 's'")
+plot(j, k, type ="p", main = "type = 'p'")
+par(mfrow = c(1, 1))
+par(mfrow = c(1, 3))
+plot(j, k, type ="o", main = "type = 'o'")
+plot(j, k, type ="b", main = "type = 'b'")
+plot(j, k, type ="h", main = "type = 'h'")
+par(mfrow = c(1, 1))
+
 4 El argumento pch
+r <- c(sapply(seq(5, 25, 5), function(i) rep(i, 5)))
+t <- rep(seq(25, 5, -5), 5)
+plot(r, t, pch = 1:25, cex = 3, yaxt = "n", xaxt = "n",
+     ann = FALSE, xlim = c(3, 27), lwd = 1:3)
+text(r - 1.5, t, 1:25)
+
 5 Título del plot en R
 5.1 Título en LaTeX
 6 Subtítulo del gráfico
